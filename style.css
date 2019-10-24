@@ -1,0 +1,285 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    background-color: #FEFAF2;
+    color: #482C24;
+    font-family: ToppanBunkyuMinchoPr6N-Regular;
+}
+
+.wrapper {
+    border-image: url(bgimg.png) 30 repeat;
+    border-style: solid;
+    border-width: 50px;
+    padding: 50px;
+}
+
+.title {
+    font-family: ToppanBunkyuMinchoPr6N-Regular;
+    font-size: 50px;
+    background: linear-gradient(transparent 40%, #F0947B 40%);
+    width: 500px;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+
+.wrapper{
+    display: none;
+}
+/*back FEFAF2
+pink FCEBE7
+yellow F7D583
+red F0947B
+moji 482C24
+*/
+
+
+/*top-section*/
+.top-section {
+    height: 100%;
+    position: relative;
+}
+
+.top-section .big-title {
+    text-align: center;
+    font-size: 70px;
+    padding: 260px 30px 0;
+    font-family: ToppanBunkyuMinchoPr6N-Regular;
+    text-shadow: 20px, 20px, 5px, pink;
+    letter-spacing: 8px;
+}
+
+.top-section span {}
+
+.top-section img {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+.bg-slider {
+    width: 100vw;
+    height: 57vh;
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*about-section*/
+.pic-box {
+    width: 312px;
+    float: left;
+    padding: 0 30px;
+}
+
+.pic-box img {
+    padding: 15px 0;
+}
+
+.wordbox {
+    float: right;
+    width: 800px;
+    padding: 0 30px;
+    height: 900px;
+}
+
+.wordbox .imagemaru {
+    position: relative;
+}
+
+.imagemaru {
+    height: 240px;
+}
+
+.wordbox h3 {
+    position: absolute;
+    top: 35px;
+    left: 45px;
+    font-size: 30px;
+    font-weight: 100;
+}
+
+.wordbox p {
+    font-size: 17px;
+    line-height: 160%;
+    padding: 5px;
+
+}
+
+.border {
+    position: absolute;
+    top: -130px;
+}
+
+#wordbox1 {
+    padding: 15px;
+    margin: 15px;
+    margin-left: 30px;
+    position: relative;
+}
+
+#wordbox2 {
+    padding: 15px;
+    margin: 15px;
+    margin-left: 30px;
+    position: relative;
+}
+
+#wordbox3 {
+    padding: 15px;
+    margin: 15px;
+    margin-left: 30px;
+    position: relative;
+}
+
+#wordbox3 p {
+    font-size: 16px;
+}
+
+.big p {
+    font-size: 25px;
+}
+
+#when {
+    height: 300px;
+    width: 200px;
+    float: left;
+}
+
+.border::before {
+    content: '';
+    position: absolute;
+    right: -20%;
+    bottom: -15px;
+    /*線の上下位置*/
+    display: inline-block;
+    width: 200px;
+    /*線の長さ*/
+    height: 1px;
+    /*線の太さ*/
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    /*位置調整*/
+    background-color: #f0947b;
+    /*線の丸み*/
+}
+
+.border::after {
+    content: '';
+    position: absolute;
+    right: -5%;
+    bottom: -30px;
+    /*線の上下位置*/
+    display: inline-block;
+    width: 1px;
+    /*線の長さ*/
+    height: 150px;
+    /*線の太さ*/
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    /*位置調整*/
+    background-color: #f0947b;
+    /*線の丸み*/
+}
+
+
+/*work-section*/
+.workwrapper {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-wrap: wrap;
+
+    margin: 50px 200px;
+}
+
+.workbox {
+    margin: 30px auto;
+}
+
+
+
+
+
+/*modal*/
+
+.modal{
+    display: none;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+}
+.modal__bg{
+    background: rgba(0,0,0,0.1);
+    height: 100vh;
+    position: absolute;
+    width: 100%;
+    left: 0;
+}
+.modal__content{
+    background: #fff;
+    border-radius: 20px;
+    border-image: url(bgimg.png) 30 repeat;
+    border-style: dashed;
+    border-width: 20px;
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 40%;
+}
+.modal__content img{
+    width: 40%;
+    float: left;
+    padding: 20px;
+}
+.modal__content h3{
+    font-size: 30px;
+}
+.modal__content span{
+    font-size: 10px;
+    padding: 30px;
+}
+.modal__p{
+   padding: 20px;
+ 
+}
+.modal__p p{
+    font-size: 14px;
+    line-height: 2em;
+}
+.js-modal-close img{
+    width: 30px;
+    float: right;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*ex-section*/
