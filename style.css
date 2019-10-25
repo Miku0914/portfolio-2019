@@ -219,13 +219,14 @@ moji 482C24
     height: 900px;
 }
 .pic-box {
-    width: 312px;
+    width: 25%;
     float: left;
     padding: 0 30px;
 }
 
 .pic-box img {
     padding: 15px 0;
+    width: 100%;
 }
 
 @media screen and (max-width: 480px) {
@@ -244,7 +245,7 @@ moji 482C24
 
 .wordbox {
     float: right;
-    width: 800px;
+    width: 60%;
     padding: 0 30px;
     height: 900px;
 }
