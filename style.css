@@ -215,6 +215,9 @@ moji 482C24
 }
 
 /*about-section*/
+.about-section{
+    /*height: 900px;*/
+}
 .pic-box {
     width: 312px;
     float: left;
@@ -441,6 +444,9 @@ moji 482C24
 }
 
 /*work-section*/
+.worksection{
+    overflow: hidden;
+}
 .workwrapper {
     display: -webkit-flex;
     display: -moz-flex;
