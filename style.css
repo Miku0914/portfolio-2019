@@ -101,6 +101,8 @@ body {
     100% {
         opacity: 0;
         display: none;
+        width: 1px;
+        height: 1px;
     }
 }
 
