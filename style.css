@@ -455,7 +455,7 @@ moji 482C24
     display: flex;
     flex-wrap: wrap;
 
-    margin: 50px 200px;
+    margin: 50px 100px;
 }
 
 @media screen and (max-width: 480px) {
