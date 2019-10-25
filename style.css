@@ -47,7 +47,7 @@ body {
 }
 
 
-#loadingWrap {
+/*#loadingWrap {
     width: 100%;
     height: 100vh;
     background: #fefaf2;
@@ -102,7 +102,7 @@ body {
         opacity: 0;
         display: none;
     }
-}
+}*/
 
 
 
@@ -163,6 +163,7 @@ moji 482C24
     float: left;
     padding: 0 30px;
 }
+
 .pic-box img {
     padding: 15px 0;
 }
@@ -187,6 +188,7 @@ moji 482C24
     padding: 0 30px;
     height: 900px;
 }
+
 .wordbox h3 {
     position: absolute;
     top: 35px;
@@ -217,7 +219,7 @@ moji 482C24
         font-size: 14px;
         font-weight: 100;
     }
-    
+
 
     .wordbox p {
         font-size: 13px;
@@ -235,15 +237,18 @@ moji 482C24
 .imagemaru {
     height: 240px;
 }
-@media screen and (max-width: 480px){
+
+@media screen and (max-width: 480px) {
     .imagemaru {
-    height: 100px;
+        height: 100px;
         margin-top: 200px;
-}
-    .imagemaru1{
+    }
+
+    .imagemaru1 {
         margin-top: 0;
     }
-    .title2{
+
+    .title2 {
         margin-top: 300px;
     }
 }
@@ -289,10 +294,19 @@ moji 482C24
     float: left;
 }
 
+#wordbox3 span {
+    display: none;
+}
+
 @media screen and (max-width: 480px) {
     #when {
         float: none;
         height: 130px;
+
+    }
+
+    #wordbox3 span {
+        display: inline;
     }
 }
 
@@ -317,7 +331,7 @@ moji 482C24
 .border::after {
     content: '';
     position: absolute;
-    right: 10%;
+    right: -5%;
     bottom: -30px;
     /*線の上下位置*/
     display: inline-block;
@@ -332,6 +346,42 @@ moji 482C24
     /*線の丸み*/
 }
 
+@media screen and (max-width: 480px) {
+    .border::before {
+
+        right: -35%;
+        bottom: -15px;
+        /*線の上下位置*/
+        display: inline-block;
+        width: 200px;
+        /*線の長さ*/
+        height: 1px;
+        /*線の太さ*/
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+        /*位置調整*/
+        background-color: #f0947b;
+        /*線の丸み*/
+    }
+
+    .border::after {
+        content: '';
+        position: absolute;
+        right: 0%;
+        bottom: -30px;
+        /*線の上下位置*/
+        display: inline-block;
+        width: 1px;
+        /*線の長さ*/
+        height: 150px;
+        /*線の太さ*/
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+        /*位置調整*/
+        background-color: #f0947b;
+        /*線の丸み*/
+    }
+}
 
 /*work-section*/
 .workwrapper {
@@ -344,18 +394,39 @@ moji 482C24
 
     margin: 50px 200px;
 }
-@media screen and (max-width: 480px){
-    .workwrapper{
+
+@media screen and (max-width: 480px) {
+    .workwrapper {
         margin: 0;
     }
+
+    .workbox {
+        margin: 30px auto;
+    }
+
+    .content img {
+        width: 150px;
+    }
+
 }
 
 .workbox {
-    margin: 30px auto;
+    margin: 50px auto;
+    padding: 20px;
 }
-.content img {
-    width: 200px;
+
+@media screen and (max-width: 480px) {
+    .workbox {
+        margin: 0px auto;
+        padding: 5px;
+    }
+
+    .workbox p {
+        font-size: 6px;
+    }
+
 }
+
 
 
 
@@ -392,6 +463,8 @@ moji 482C24
     left: 50%;
     transform: translate(-50%, -50%);
     width: 40%;
+    z-index: 999;
+ 
 }
 
 .modal__content img {
@@ -399,6 +472,7 @@ moji 482C24
     float: left;
     padding: 20px;
 }
+
 
 .modal__content h3 {
     font-size: 30px;
@@ -419,16 +493,146 @@ moji 482C24
     line-height: 2em;
 }
 
+@media screen and (max-width: 480px) {
+    .modal__p p {
+        font-size: 8px;
+        line-height: 2em;
+    }
+
+    .modal__content {
+
+        border-radius: 20px;
+        border-image: url(bgimg.png) 30 repeat;
+        border-width: 5px;
+        padding: 10px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 60%;
+    }
+
+    .modal__content img {
+        width: 80%;
+        float: none;
+        padding: 5px;
+        margin: 0 20px;
+    }
+
+    .modal__content span {
+        font-size: 5px;
+        padding: 10px;
+
+    }
+
+    .modal__content h3 {
+        font-size: 15px;
+    }
+
+    .modal__p {
+        padding: 8px;
+
+    }
+}
+
+
+.link img{
+    width: 30px;
+    float:right;
+}
 .js-modal-close img {
     width: 30px;
     float: right;
 }
 
+/*.js-modal-open {
+    width: 375px;
+    overflow: hidden;
+}
+
+.js-modal-open img {
+    width: 100%;
+    -moz-transition: -moz-transform 0.5s linear;
+    -webkit-transition: -webkit-transform 0.5s linear;
+    -o-transition: -o-transform 0.5s linear;
+    -ms-transition: -ms-transform 0.5s linear;
+    transition: transform 0.5s linear;
+
+    -webkit-transform: scale(1.0);
+    -moz-transform: scale(1.0);
+    -o-transform: scale(1.0);
+    -ms-transform: scale(1.0);
+    transform: scale(1.0);
+    z-index: 1;
+}
+.content img{
+    z-index: -1;
+}
+
+.js-modal-open img:hover {
+    -webkit-transform: scale(1.03);
+    -moz-transform: scale(1.03);
+    -o-transform: scale(1.03);
+    -ms-transform: scale(1.03);
+    transform: scale(1.03);
+}*/
+.js-modal-open img{
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+}
+.js-modal-open img:hover{
+    opacity: 0.7;
+}
 
 
 
+.fuwatAnime {
+    -webkit-animation-fill-mode: both;
+    -ms-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-duration: 1.5s;
+    -ms-animation-duration: 1.5s;
+    animation-duration: 1.5s;
+    -webkit-animation-name: fuwatAnime;
+    -ms-animation-name: fuwatAnime;
+    animation-name: fuwatAnime;
+    visibility: visible !important;
+}
 
+@-webkit-keyframes fuwatAnime {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(-20px);
+    }
 
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+    }
+}
+
+@keyframes fuwatAnime {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(-20px);
+        -ms-transform: translateY(-20px);
+        transform: translateY(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+
+.modal__content {
+    
+    z-index: 999;
+    
+}
 
 
 

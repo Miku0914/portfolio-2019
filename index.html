@@ -18,7 +18,7 @@
 <body>
     <div id="loadingWrap">
         <div id="loading"></div>
-        
+
     </div>
     <div id="wrap">
         <div class="top-section">
@@ -29,14 +29,14 @@
         </div>
         <div class="wrapper">
             <div class="about-section">
-                <h2 class="title">ABOUT ME</h2>
-                <div class="pic-box">
+                <h2 class="title fuwat">ABOUT ME</h2>
+                <div class="pic-box fuwat">
                     <img src="me1.png" alt="">
                     <img src="me2.png" alt="">
                 </div>
                 <div class="wordbox">
 
-                    <div class="imagemaru imagemaru1">
+                    <div class="imagemaru imagemaru1 fuwat">
                         <img src="maru.png" alt="">
                         <h3>屋代 美紅 Miku Yashiro</h3>
 
@@ -48,7 +48,7 @@
                         </div>
                     </div>
 
-                    <div class="imagemaru">
+                    <div class="imagemaru fuwat">
                         <img src="maru.png" alt="">
                         <h3>skills</h3>
 
@@ -61,21 +61,21 @@
 
                         </div>
                     </div>
-                    <div class="imagemaru">
+                    <div class="imagemaru fuwat">
                         <img src="maru.png" alt="">
                         <h3>bio</h3>
 
                         <div class="border borders" id="wordbox3">
                             <div id="when">
-                                <p>2016年1月~2018年1月<br>
-                                    2018年2月〜現在<br><br>
-                                    2019年8月〜現在</p>
+                                <p><span>①</span>2016年1月~2018年1月<br>
+                                    <span>②</span>2018年2月〜現在<br><br>
+                                    <span>③</span>2019年8月〜現在</p>
                             </div>
                             <p>
-                                ブックマルシェ我孫子店にて、書店のレジ業務、品出しを行った。<br>
-                                市進学院我孫子教室にて、個別指導講師として小中高生に文系、理系の<br>
+                                <span>①</span>ブックマルシェ我孫子店にて、書店のレジ業務、品出しを行った。<br>
+                                <span>②</span>市進学院我孫子教室にて、個別指導講師として小中高生に文系、理系の<br>
                                 指導を行っている。また、受付業務も行っている。<br>
-                                Life is Tech!にてメンターとしてUnityとWebデザインを中高生に教え<br>
+                                <span>③</span>Life is Tech!にてメンターとしてUnityとWebデザインを中高生に教え<br>
                                 ている。
                             </p>
                         </div>
@@ -83,7 +83,7 @@
                 </div>
             </div>
             <div class="work-section">
-                <h2 class="title title2">WORKS</h2>
+                <h2 class="title title2 fuwat">WORKS</h2>
                 <div class="workwrapper">
                     <div class="workbox">
 
@@ -103,11 +103,11 @@
                                         すべての素材、ゲームオブジェクト、背景を自身で製作しているオリジナルゲームです。<br>
 
                                         龍の動きにBoneを使用し、滑らかに動くように実装しています。
-                                        <br><a href="https://unityroom.com/games/tenku-no-ryu">UnityRoom</a>で公開しています。<br>
+                                        <br>UnityRoomで公開しています。<br>
                                         <span>使用ツール：Unity / clipStudioPaint / Illustrator</span><br>
                                         <span>製作期間：１ヶ月程度</span></p>
                                 </div>
-
+                                <div class="link"><a href="https://unityroom.com/games/tenku-no-ryu" target="_blank"><img src="link.png" alt=""></a></div>
                                 <a class="js-modal-close" href=""><img src="close.png" alt=""></a>
                             </div>
                             <!--modal__inner-->
@@ -135,12 +135,13 @@
                                         <span>製作期間：１ヶ月程度</span>
                                     </p>
                                 </div>
+                                <div class="link"><a href="https://abiko-city.life/" target="_blank"><img src="link.png" alt=""></a></div>
                                 <a class="js-modal-close" href=""><img src="close.png" alt=""></a>
                             </div>
                             <!--modal__inner-->
                         </div>
                         <!--modal-->
-                        <p>「住みよい街、あびこ」Webサイト</p>
+                        <p>「住みよい街、あびこ」サイト</p>
                     </div>
 
                     <div class="workbox">
@@ -159,13 +160,13 @@
                                         <span>製作期間：1週間</span>
                                     </p>
                                 </div>
-
+                                <div class="link"><a href="https://store.line.me/stickershop/product/5211203" target="_blank"><img src="link.png" alt=""></a></div>
                                 <a class="js-modal-close" href=""><img src="close.png" alt=""></a>
                             </div>
                             <!--modal__inner-->
                         </div>
                         <!--modal-->
-                        <p>「メガネくんと仲間たち」LINEスタンプ</p>
+                        <p>「メガネ君と仲間たち」スタンプ</p>
                     </div>
                     <div class="workbox">
                         <div class="content">
@@ -323,6 +324,19 @@
         $('.js-modal-close').on('click', function() {
             $('.js-modal').fadeOut();
             return false;
+        });
+    });
+    $(document).ready(function() {
+        $('.fuwat').css('visibility', 'hidden');
+        $(window).scroll(function() {
+            var windowHeight = $(window).height(),
+                topWindow = $(window).scrollTop();
+            $('.fuwat').each(function() {
+                var objectPosition = $(this).offset().top;
+                if (topWindow > objectPosition - windowHeight + 200) {
+                    $(this).addClass("fuwatAnime");
+                }
+            });
         });
     });
 
